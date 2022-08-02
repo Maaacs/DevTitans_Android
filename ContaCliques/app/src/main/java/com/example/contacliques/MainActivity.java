@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button botaoIncrementa;
     private TextView displayValor;
     private int acumulador;
+    int cont;
 
 
     //TextView1
@@ -48,13 +49,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void incrementaValor(View view) {
         //this.setAcumulador(this.getAcumulador() + 1000);
-        //this.setDisplayValor().this.getAcumulador();
-        //Integer.toString(this.getAcumulador());
-        //aqui tu converte pra string     //inteiro a ser convertido
-        this.getDisplayValor().setText(Integer.toString(this.getAcumulador()+1000));
-        //int numeroConvertido = Integer.parseInt(this.getAcumulador());
-        //this.setAcumulador(numeroConvertido);
+
+        //Converte para string     //inteiro a ser convertido
+        //this.getDisplayValor().setText(Integer.toString(this.getAcumulador()+1000));
         //this.getDisplayValor().setText("teste de clique");
+
+        if (cont == 0){
+            this.getDisplayValor().setText(Integer.toString(this.getAcumulador()));
+            cont++;
+        }
+        else {
+            this.getDisplayValor().setText(Integer.toString(this.getAcumulador()+1000));
+            this.setAcumulador(this.getAcumulador() + 1000);
+        }
     }
 
 
@@ -65,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         this.setBotaoIncrementa(findViewById(R.id.botaoIncrementa));
         this.setDisplayValor(findViewById(R.id.displayValorAcumulado));
         this.setAcumulador(10000);
+        int cont = 0;
     }
 }
 
