@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Lembrete</string>
+    <string name="segunda_tela">Segunda Tela</string>
+    <string name="proxima_tela">Proxima Tela</string>
 </resources>
