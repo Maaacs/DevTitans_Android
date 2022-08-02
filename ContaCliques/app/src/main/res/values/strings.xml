@@ -2,5 +2,5 @@
     <string name="app_name">ContaCliques</string>
     <string name="botao_Incrementa">Incrementa</string>
     <string name="Texto_MinhaConta">Minha Conta</string>
-    <string name="Texto_ValorAcumulado">Valor Acumulado</string>
+    <string name="Texto_ValorAcumulado">10000</string>
 </resources>

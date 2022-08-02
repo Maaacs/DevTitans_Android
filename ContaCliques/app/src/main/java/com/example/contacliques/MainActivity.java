@@ -48,20 +48,15 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void incrementaValor(View view) {
-        //this.setAcumulador(this.getAcumulador() + 1000);
-
-        //Converte para string     //inteiro a ser convertido
-        //this.getDisplayValor().setText(Integer.toString(this.getAcumulador()+1000));
         //this.getDisplayValor().setText("teste de clique");
-
-        if (cont == 0){
+        /*if (cont == 0){
             this.getDisplayValor().setText(Integer.toString(this.getAcumulador()));
             cont++;
         }
-        else {
+        else { }*/
+            //Converte para string     //inteiro a ser convertido
             this.getDisplayValor().setText(Integer.toString(this.getAcumulador()+1000));
             this.setAcumulador(this.getAcumulador() + 1000);
-        }
     }
 
 
