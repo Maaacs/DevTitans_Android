@@ -16,15 +16,18 @@ public class MainActivity extends AppCompatActivity {
 
     //TextView1
     public TextView getDisplayValor() {
+
         return displayValor;
     }
 
     public void setDisplayValor(TextView displayValor) {
+
         this.displayValor = displayValor;
     }
 
     //Button
     public Button getBotaoIncrementa() {
+
         return botaoIncrementa;
     }
     public void setBotaoIncrementa(Button botaoIncrementa) {
@@ -33,10 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
     //TextView2
     public int getAcumulador() {
+
         return acumulador;
     }
 
     public void setAcumulador(int acumulador) {
+
         this.acumulador = acumulador;
     }
 
@@ -44,7 +49,12 @@ public class MainActivity extends AppCompatActivity {
     public void incrementaValor(View view) {
         //this.setAcumulador(this.getAcumulador() + 1000);
         //this.setDisplayValor().this.getAcumulador();
-        this.getDisplayValor().setText("teste de clique");
+        //Integer.toString(this.getAcumulador());
+        //aqui tu converte pra string     //inteiro a ser convertido
+        this.getDisplayValor().setText(Integer.toString(this.getAcumulador()+1000));
+        //int numeroConvertido = Integer.parseInt(this.getAcumulador());
+        //this.setAcumulador(numeroConvertido);
+        //this.getDisplayValor().setText("teste de clique");
     }
 
 
@@ -54,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         this.setBotaoIncrementa(findViewById(R.id.botaoIncrementa));
         this.setDisplayValor(findViewById(R.id.displayValorAcumulado));
-        //this.setAcumulador(10000);
+        this.setAcumulador(10000);
     }
 }
 

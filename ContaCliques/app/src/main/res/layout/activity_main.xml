@@ -10,6 +10,7 @@
         android:id="@+id/displayValorAcumulado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:onClick="incrementaValor"
         android:text="@string/Texto_ValorAcumulado"
         android:textSize="20sp"
