@@ -6,39 +6,44 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button BotaoArbrirProximaTela;
+    private Button botaoEntrar;
+    private EditText caixaNome;
 
-
-   public void BotaoAbrirProximaTela(View view){
-       Intent nextActivity = new Intent(MainActivity.this, MainActivity2.class);
-       //Intent nextActivity = new Intent(packageContext:MainActivity.this, MainActivity2.class);
-       startActivity(nextActivity);
-   }
-
-    public Button getBotaoArbrirProximaTela() {
-        return BotaoArbrirProximaTela;
+    public EditText getCaixaNome() {
+        return caixaNome;
     }
 
-    public void setBotaoArbrirProximaTela(Button botaoArbrirProximaTela) {
-        BotaoArbrirProximaTela = botaoArbrirProximaTela;
+
+    public void setBotaoEntrar(Button botaoEntrar) {
+        this.botaoEntrar = botaoEntrar;
     }
 
+    public void entrarApp(View view){
+        Intent nextActivity = new Intent(MainActivity.this, TelaLembrete.class);
+        nextActivity.putExtra("nomeUsuario", getCaixaNome().getText().toString());
+        startActivity(nextActivity);
+
+    }
+
+    public void setCaixaNome(EditText caixaNome) {
+        this.caixaNome = caixaNome;
+    }
+
+    public Button getBotaoEntrar() {
+        return botaoEntrar;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*this.setDisplayEntrada(findViewById(R.id));
-        this.setEntradaTexto(findViewByIdr.id());
-        this.setSalvarBotao(findViewById())*/
-        this.setBotaoArbrirProximaTela(findViewById(R.id.button));
-
-        /*this.setTextRecebido(findViewById(R.id));
-        Intent intentRecebido = getIntent();
-        getTextRecebido().setText(intentRecebido.getStringExtra());*/
+        this.setBotaoEntrar(findViewById(R.id.botaoEntrar));
+        this.setCaixaNome(findViewById(R.id.caixaNome));
+        setContentView(R.layout.activity_main);
     }
 }

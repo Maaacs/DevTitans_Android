@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">Lembrete</string>
-    <string name="segunda_tela">Segunda Tela</string>
-    <string name="proxima_tela">Proxima Tela</string>
+    <string name="usuario">Usuario</string>
+    <string name="lembretes">Lembretes</string>
+    <string name="entrar">Entrar</string>
+    <string name="textview">TextView</string>
+    <string name="button">Button</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="escreva_aqui_o_seu_lembrete">Escreva aqui o seu lembrete</string>
+    <string name="salvar">Salvar</string>
+    <string name="escreva_aqui_o_seu_lembretee">Escreva aqui o seu lembrete</string>
+    <string name="apagar">Apagar?</string>
 </resources>
